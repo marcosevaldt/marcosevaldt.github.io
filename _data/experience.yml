@@ -1,9 +1,36 @@
-# Experience template
-- company: Company name
-  link: Link to company (optional)
-  job_title: Job title
-  dates: Date Range (eg. November 2016 - present)
+
+- company: Egali
+  link: http://www.egali.com.br
+  job_title: Janeiro 2018 - atual
+  dates: Janeiro 2018 - atual
   quote: >
-   Short description of the company (optional)
+   Agência de Intercâmbio
   description: | # this will include new lines to allow paragraphs
-    Description of role
+    Manutenção ao sistema interno, correção de bugs e implementação de novas funcionalidade no sistema utilizando PHP, HTML, CSS, Javascript e banco de dados MySQL.
+
+- company: Egali
+  link: http://www.egali.com.br
+  job_title: Estagiário de Desenvolvimento
+  dates: Outubro 2017 - Janeiro 2018
+  quote: >
+   Agência de Intercâmbio
+  description: | # this will include new lines to allow paragraphs
+    Manutenção ao sistema interno, correção de bugs e implementação de novas funcionalidade no sistema utilizando PHP, HTML, CSS, Javascript e banco de dados MySQL.
+
+- company: KingHost
+  link: http://www.kinghost.com.br
+  job_title: Analista de Suporte Técnico
+  dates: Novembro 2016 - Outubro 2017
+  quote: >
+   Hospedagem de Sites
+  description: | # this will include new lines to allow paragraphs
+    Suporte técnico especializado aos clientes através de chat, chamado, e-mail e telefone.
+
+- company: KingHost
+  link: http://www.kinghost.com.br
+  job_title: Julho 2016 - Novembro 2016
+  dates: Julho 2016 - Novembro 2016
+  quote: >
+   Hospedagem de Sites
+  description: | # this will include new lines to allow paragraphs
+    Suporte técnico especializado aos clientes através de chat, chamado, e-mail e telefone.
