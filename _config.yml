@@ -38,7 +38,7 @@ about_content: | # this will include new lines to allow paragraphs
 # More Section
 # more_title: A Little More About Me #(Use this to override about more section title)
 more_content: | # this will include new lines to allow paragraphs
-  Durante minha trajetória acadêmica e profissional tive a oportunidade de trabalhar com diversas tecnologias que são a minha paixão, gosto da leitura de livros técnicos e de conhecer as tecnologias emergentes do mercado, alguns tópicos que estou me aprofundando são
+  Durante minha trajetória acadêmica e profissional tive a oportunidade de trabalhar com diversas tecnologias que são a minha paixão, gosto da leitura de livros técnicos e de conhecer as tecnologias emergentes do mercado, alguns tópicos que estou me aprofundando são:
   - Docker
   - Kubernetes
   - Agile Methodology
