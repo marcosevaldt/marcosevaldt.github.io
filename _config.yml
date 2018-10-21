@@ -22,7 +22,7 @@ linkedin_username: marcos-evaldt-3a3494133
 
 # About Section
 # about_title: About Me (Use this to override about section title)
-about_profile_image: images/profile.png
+about_profile_image: images/profile.jpg
 about_content: | # this will include new lines to allow paragraphs
   Sou um desenvolvedor PHP apaixonado por tecnologia, inovação e sempre em busca de novos desafios, me preocupo com padrões de projeto com foco na manutenção e desenvolvimento de novas funcionalidades em sistemas novos e/ou legados e sempre que posso contribuo para projetos da comunidade open-source.
 
