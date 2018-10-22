@@ -1,6 +1,6 @@
 
 - name: Schedule System
-  link: https://github.com/marcosevaldt/slim3-schedule
+  #link: https://github.com/marcosevaldt/slim3-schedule
   github: marcosevaldt/slim3-schedule
   quote: >
     Slim + Doctrine - Schedule
@@ -8,7 +8,7 @@
     Sistema de agendamento de salas, utilizando um microframework moderno e rápido chamado Slim, pude aprender a utilizar um componente famoso dentro do Symfony, Zend Framework para abstração da camada de banco de dados chamado Doctrine.
 
 - name: Financial System
-  link: https://github.com/marcosevaldt/docker-lumen
+  #link: https://github.com/marcosevaldt/docker-lumen
   github: marcosevaldt/docker-lumen
   quote: >
     Docker + Lumen - Ambiente Automatizado
@@ -16,7 +16,7 @@
     Sistema de gerenciamento financeiro, aqui comecei minha jornada com Docker onde aprendi a criar um ambiente automatizado, foi meu primeiro contato com containers em conjunto com um microframework potente do Laravel chamado Lumen.
 
 - name: Blog System
-  link: https://github.com/marcosevaldt/laravel-blog
+  #link: https://github.com/marcosevaldt/laravel-blog
   github: marcosevaldt/laravel-blog
   quote: >
     Laravel
@@ -24,7 +24,7 @@
     Sistema de gerenciamento de conteúdo, Laravel é uma Framework bem conhecido entre os desenvolvedores PHP, acredito que suas duas maiores qualidades são simplicidade e facilidade de se tornar expressivo quando o assunto é código facilitando a nossa vida.
 
 - name: API Request
-  link: https://github.com/marcosevaldt/ionic3-httpRequest
+  #link: https://github.com/marcosevaldt/ionic3-httpRequest
   github: marcosevaldt/ionic3-httpRequest
   quote: >
     Ionic Framework - Mobile 
