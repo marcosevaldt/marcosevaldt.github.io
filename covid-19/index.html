@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>Mapa do Brasil</title>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <link href="jqvmap.css" media="screen" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="jquery.vmap.js"></script>
+    <script type="text/javascript" src="jquery.vmap.brazil.js" charset="utf-8"></script>
+    <script>
+      let today  = '2020-04-06';
+      let result = [];
+      $.ajax({ url: "https://brasil.io/api/dataset/covid19/caso/data?format=json&date=" + today,
+              type: "GET",
+	      async: false,
+              success: function (data) {
+		      data.results.reduce(function(res, value) {
+			      if (!res[value.state]) {
+				      res[value.state] = { state: value.state, confirmed: 0 };
+				      result.push(res[value.state])
+			      }
+			      res[value.state].confirmed += value.confirmed_per_100k_inhabitants;
+			      return res;
+		      }, {});
+              }
+      });
+      const LEVE_NUMERO       = 100;
+      const GRAVISSIMO_NUMERO = 400;
+      let colors    = {};
+      let confirmed = {};
+      $(result).each(function (index, item){
+	      if (!item[item.state]) {
+		      let color = '';
+		      if(item.confirmed <= LEVE_NUMERO) {
+			      color = '#188043';
+		      }
+		      if(item.confirmed > LEVE_NUMERO && item.confirmed < GRAVISSIMO_NUMERO) {
+			      color = '#f5c230';
+		      }
+		      if(item.confirmed >= GRAVISSIMO_NUMERO) {
+			      color = '#9c0a15';
+		      }
+		      colors[item.state.toLowerCase()]    = color;
+		      confirmed[item.state.toLowerCase()] = parseInt(item.confirmed);
+	      }
+      });
+      jQuery(document).ready(function () {
+        jQuery('#vmap').vectorMap({
+          map: 'brazil_br',
+          colors: colors,
+          onLoad: function(event, map)
+          {
+		  $.each( confirmed, function( key, value ) {
+			  document.getElementById('box-lista').innerHTML += key.toUpperCase() + '&nbsp' + value + '<br>';
+		  });
+          },
+          onRegionOver: function(event, code, region)
+          {
+		  let value = confirmed[code] === undefined ? 0 : confirmed[code];
+		  document.getElementById('box').innerHTML = region + '&nbsp' + value;
+          },
+          onRegionOut: function(event, code, region)
+          {
+		  document.getElementById('box').innerHTML = '';
+          },
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div id="vmap"></div>
+    <div id="box" class="infoi" style="width: 300px;height:100px;top:50;left:100px;"></div>
+    <div id="box-lista" class="infoi" style="width: 300px;height:100px;top:100px"></div>
+  </body>
+</html>
