@@ -9,7 +9,7 @@
     <script type="text/javascript" src="jquery.vmap.js"></script>
     <script type="text/javascript" src="jquery.vmap.brazil.js" charset="utf-8"></script>
     <script>
-      let today  = '2020-04-06';
+      let today  = new Date().toISOString().slice(0,10);
       let result = [];
       $.ajax({ url: "https://brasil.io/api/dataset/covid19/caso/data?format=json&date=" + today,
               type: "GET",
